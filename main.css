@@ -1,0 +1,181 @@
+:root {
+    --green: #00FF00;
+    --white: #FFFFFF;
+    --black: #000000;
+    --pinkL: #f5448e;
+    --pinkD:#cf0000;
+  }
+
+body {
+background: var(--bg);
+color: var(--fontColor);
+font-family: helvetica;
+}
+ul {
+    font-family: helvetica;
+    position: fixed;
+    background-color: #dddddd;
+    top:0;
+    width: 95%;
+}
+li {
+    float:left;
+    display: inline;
+    list-style: none;
+    border-right: 1px solid #bbb;
+}
+img{
+  display:block;
+  margin:auto;
+  position: relative;
+  left:20%;
+  top: 20px;
+  width: 30%;
+  height: 35%;
+  float:left;
+}
+
+a
+{
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+.active{
+  background-color: var(--pinkD);
+}
+.list {
+list-style: square;
+}
+.main{
+  top: 30px;  
+  --margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+/* .menu_centet {text-align:center;} */
+.menu { margin:0%; padding:0%; display:inline-block;width: 99%; }
+.menu li {margin:0; padding:0%; list-style:none; float:left; padding-left:0px; padding-right:0px;}
+.menu-text{color:#000000;}
+li:last-child
+{
+  border-right: none;
+}
+/*.menu   {*display:inline;}*/
+#msg {
+font-family: monospace;
+}
+.pink-theme
+{
+  --bg: var(--pinkL);
+  --fontColor: var(--black);
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
+}
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+  }
+  
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+/*bottom*/
+.btndiv{
+  position: absolute;
+  left: 42%;
+  bottom:0px;
+  height: 20%;
+  width: 20%;
+}
+.btn {
+    position: relative;
+    top: 20px;
+    left:40%;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+  }
+  .btnyes {
+    position: absolute;
+    bottom:0px;
+    left: 0%;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    float:left;
+  }
+  .btnno {
+    position: absolute;
+    bottom: 0px;
+    left: 200px;
+    height:  90px;
+    width: 90px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    float:left;
+
+  }
+  /* table */
+  table{
+    top: 18px;
+    display: block;
+    position: relative;
+    left:20.5%;
+    width: 25%;
+    height: 35%;
+    border-collapse: collapse;
+    float:left;
+  }
+  
+  table tr{
+    border-bottom: solid 2px white;
+  }
+  
+  table tr:last-child{
+    border-bottom: none;
+  }
+  
+  table th{
+    position: relative;
+    width: 25%;
+    background-color: #7d7d7d;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  table th:after{
+    display: block;
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top:calc(50% - 10px);
+    right:-10px;
+    border-left: 10px solid #7d7d7d;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  
+  table td{
+    text-align: left;
+    width: 70%;
+    text-align: center;
+    background-color: #eee;
+    color:#000000;
+    padding: 10px 0;
+  }
