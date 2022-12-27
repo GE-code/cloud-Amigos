@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  nav .brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .brand h1 {
+    margin: 0;
+    font-size: 18px;
+    display: block;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+  
+  nav a.active {
+    font-weight: 600;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .user-profile img {
+    top:5px;
+    display: block;
+    width: 30%;
+    height: auto;
+    border-radius: 25%;
+    align-items: center;
+    margin: 0;
+    margin: 0 auto;
+
+  }
+  
+  .user-details {
+    margin-left: 20px;
+    margin: 0 auto;  /* 置中資訊 */
+  }
+  
+  .user-details h2 {
+    font-size: 24px;
+    margin: 0 auto;  /* 置中資訊 */
+  }
+  
+  .user-details p {
+    font-size: 16px;
+    margin: 0 auto;  /* 置中資訊 */
+  }
+  .actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .actions btnlike, .actions btndislike {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* border: none; */
+    /* outline: none; */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 5%;
+  }
+  
+  .btnlike {
+    background-color: #4caf50;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 7%;
+  }
+  
+  .btndislike {
+    background-color: #f44336;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 7%;
+  }
+  

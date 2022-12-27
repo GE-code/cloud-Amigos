@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Amigos</title>
+  <link rel="stylesheet" href="changeinfo.css">
+</head>
+<body>
+  <nav>
+    <div class="brand">
+      <h1>Amigos</h1>
+    </div>
+    <div>
+        <a href="changeinfo.html" class="active">更改使用者資訊</a>
+        <a href="use.html" >上一頁</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>更改使用者資訊</h1>
+    <form action="/update-user-info" method="post" enctype="multipart/form-data" id="form-data">
+      <label for="username">使用者名稱：</label><br>
+      <input type="text" id="username" name="username" value=""><br>
+      <label for="email">電子郵件：</label><br>
+      <input type="email" id="email" name="email" value=""><br>
+      <label for="photo">照片：</label><br>
+      <input type="file" id="photo" name="photo"><br>
+      <label for="interests">興趣：</label><br>
+      <select id="interests" name="interests">
+          <option value="sports">體育</option>
+          <option value="music">音樂</option>
+          <option value="art">藝術</option>
+          <option value="travel">旅遊</option>
+          <option value="others">其他</option>
+      </select><br>
+      <label for="gender">性別：</label><br>
+      <select id="gender" name="gender">
+          <option value="male">男性</option>
+          <option value="female">女性</option>
+      </select><br>
+      <label for="age">年齡：</label><br>
+      <input type="number" id="age" name="age" value=""><br>
+      <label for="location">居住地：</label><br>
+      <input type="text" id="location" name="location" value=""><br>
+      <label for="selfintroduce">自我介紹：</label><br>
+      <input type="text" id="selfintroduce" name="selfintroduce"><br>
+      <button type="submit" class="btn" id="submit-button">更新資訊</button>
+    </form> 
+  </div>
+  <script>
+    // // 取得表單提交按鈕元素
+    // const submitButton = document.getElementById('submit-button');
+
+    // // 為表單提交按鈕綁定事件處理函數
+    // submitButton.addEventListener('click', (event) => {
+    // // 取消預設的表單提交事件
+    // //event.preventDefault();
+    // // 取得所有表單輸入欄位的值
+    // const formData = {
+    //     username: document.getElementById('username').value,
+    //     email: document.getElementById('email').value,
+    //     password: document.getElementById('password').value,
+    //     confirmPassword: document.getElementById('confirm_password').value,
+    //     photo: document.getElementById('photo').value,
+    //     interests: document.getElementById('interests').value,
+    //     gender: document.getElementById('gender').value,
+    //     age: document.getElementById('age').value,
+    //     location: document.getElementById('location').value
+    // };
+    // console.log(formData);
+    // // 在此處處理更新使用者資訊的程序
+    // // 可以使用XMLHttpRequest或是fetch API發送請求至伺服器端
+    // // 然後在伺服器端更新資料庫中的使用者資訊
+    // });
+    const button = document.querySelector("#submit-button");  // 取得表單提交按鈕
+        button.addEventListener("click", (event) => {  // 監聽按鈕點擊事件
+        event.preventDefault();  // 阻止表單提交
+        const formData = new FormData(document.querySelector("#form-data"));  // 取得表單資料
+        const data = {};  // 建立空的data物件
+        formData.forEach((value, key) => {  // 將表單資料加入data物件
+            data[key] = value;
+        });
+        console.log(data);  // 输出表單資料
+        });
+  </script>
+</body>
+</html>

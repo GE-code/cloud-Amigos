@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Amigos</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <nav>
+        <div class="brand">
+          <h1>Amigos</h1>
+        </div>
+        <div>
+          <a href="login.html" class="active">登入</a>
+          <a href="register.html" >註冊</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>登入</h1>
+        <form action="/login" method="post">
+            <label for="username">使用者名稱：</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">密碼：</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit" class="btn">登入</button>
+        </form> 
+    </div>
+    <script> 
+    // 获取登入按钮
+        const loginBtn = document.querySelector('.btn');
+        // 点击登入按钮时触发
+        loginBtn.addEventListener('click', (event) => {
+          // 取消默认的表单提交行为
+          event.preventDefault();
+          // 获取表单输入的数据
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+          // 登录代码
+          // ...
+          console.log(username,password);
+          window.location.href = 'use.html';
+        });</script>
+</body>
+</html>
